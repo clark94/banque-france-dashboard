@@ -153,3 +153,20 @@ L’objectif principal du projet est :
 - Data Engineering (pipeline) 🔧
 
 ---
+
+---
+
+⭐ Conclusion
+
+👉 Projet complet démontrant la capacité à construire une application data de bout en bout :
+
+➡️ Data → Analyse → Modèle → API → Dashboard
+
+---
+
+## 🌍 Déploiement
+
+Le dashboard est déployé avec Streamlit Cloud.
+
+⚠️ Remarque :
+La version en ligne utilise directement les données et le modèle sans passer par l’API FastAPI (utilisée uniquement en local).
