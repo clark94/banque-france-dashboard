@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16
+    container_name: banque_france_postgres
+    environment:
+      POSTGRES_DB: banque_france_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  api:
+    build: .
+    container_name: banque_france_api
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/banque_france_db
+      MODEL_PATH: model/model.pkl
+      DATA_PATH: data/raw/flux-et-taux-la-ldds-lep.csv
+      APP_HOST: 0.0.0.0
+      APP_PORT: 8000
+    ports:
+      - "8000:8000"
+
+volumes:
+  postgres_data:
