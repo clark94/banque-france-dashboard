@@ -168,5 +168,7 @@ L’objectif principal du projet est :
 
 Le dashboard est déployé avec Streamlit Cloud.
 
+👉 https://banque-france-dashboard-3znnfrrnwjrq2rlp6ngchz.streamlit.app/#statistiques
+
 ⚠️ Remarque :
 La version en ligne utilise directement les données et le modèle sans passer par l’API FastAPI (utilisée uniquement en local).
